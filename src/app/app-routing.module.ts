@@ -16,6 +16,14 @@ const routes: Routes = [
     // },
     loadChildren: './modules/flex/flex.module#FlexModule',
   },
+  {
+    path: 'admin',
+    data: {preload: true},
+    // loadChildren: () => {
+    //   return import('./modules/admin/admin.module').then(m => m.AdminModule);
+    // },
+    loadChildren: './modules/admin/admin.module#AdminModule',
+  },
 ];
 
 @NgModule({
