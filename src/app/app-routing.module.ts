@@ -3,11 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'flex',
-    pathMatch: 'full'
-  },
+  // {
+  //   path: '',
+  //   redirectTo: 'flex',
+  //   pathMatch: 'full'
+  // },
   {
     path: 'flex',
     data: {preload: true},
