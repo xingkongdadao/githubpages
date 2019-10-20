@@ -11,10 +11,10 @@ const routes: Routes = [
   {
     path: 'flex',
     data: {preload: true},
-    // loadChildren: () => {
-    //   return import('./modules/flex/flex.module').then(m => m.FlexModule);
-    // },
-    loadChildren: './modules/flex/flex.module#FlexModule',
+    loadChildren: () => {
+      return import('./modules/flex/flex.module').then(m => m.FlexModule);
+    },
+    // loadChildren: './modules/flex/flex.module#FlexModule',
   },
 ];
 
