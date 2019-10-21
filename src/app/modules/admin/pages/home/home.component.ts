@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  private URL = 'http://111.231.101.150:8801';
+  private URL = '//111.231.101.150:8801';
   goodsCategory: any;
 
   constructor(private http: HttpClient) { }
