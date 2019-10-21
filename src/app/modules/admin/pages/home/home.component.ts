@@ -15,11 +15,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this.getGoodsCategoryList().subscribe(
-      value => {
-        this.goodsCategory = value.results;
-      }
-    );
+    // this.getGoodsCategoryList().subscribe(
+    //     //   value => {
+    //     //     this.goodsCategory = value.results;
+    //     //   }
+    //     // );
 
   }
 
