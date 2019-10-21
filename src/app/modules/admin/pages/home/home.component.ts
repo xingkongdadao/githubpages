@@ -10,6 +10,7 @@ import {Observable} from 'rxjs';
 export class HomeComponent implements OnInit {
   private URL = 'http://111.231.101.150:8801';
   goodsCategory: any;
+  goodsInfo: any;
 
   constructor(private http: HttpClient) { }
 
@@ -18,6 +19,12 @@ export class HomeComponent implements OnInit {
     this.getGoodsCategoryList().subscribe(
       value => {
         this.goodsCategory = value.results;
+      }
+    );
+
+    this.getGoodsInfoList().subscribe(
+      value => {
+        this.goodsInfo = value.results;
       }
     );
 
@@ -42,7 +49,7 @@ export class HomeComponent implements OnInit {
       .set('page', page.toString() )
       .set('page_size', pageSize.toString() );
 
-    return this.http.get<any>(this.URL + '/goodsinfo/', {params});
+    return this.http.get<any>(this.URL + '/goods_info/', {params});
   }
 
 
