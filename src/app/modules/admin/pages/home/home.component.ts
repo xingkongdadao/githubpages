@@ -32,4 +32,21 @@ export class HomeComponent implements OnInit {
       .set('page_size', pageSize.toString() );
 
     return this.http.get<any>(this.URL + '/goods_category/', {params});
-  }}
+  }
+
+  // 提取所有商品类别
+  getGoodsInfoList(page = 1 , pageSize = 20 , goodsCategory = ''): Observable<any> {
+
+    const params = new HttpParams()
+      .set('name_contains', goodsCategory.toString().trim().toLowerCase() )
+      .set('page', page.toString() )
+      .set('page_size', pageSize.toString() );
+
+    return this.http.get<any>(this.URL + '/goodsinfo/', {params});
+  }
+
+
+
+
+
+}
